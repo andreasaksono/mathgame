@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Login</title>
-  <link href="style/css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<title>Login</title>
+<link href="style/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
+<div class="container">
 <form action="authenticate.php" method="post" class="form-horizontal">
   <div class="row">
     <div class="col-sm-12" style="text-align:center;">
@@ -22,17 +17,19 @@
   <div class="form-group">
     <label for="password" class="control-label col-sm-4">Password:</label>
       <div class="col-sm-3">
-        <input type="password" class="form-control" name="password" placeholder="Password"/>
+        <input type="password" class="form-control"
+        name="password" placeholder="Password"/>
     </div>
   </div>
   <div class="form-group">
-    <div class="col-lg-4">
-      <button type="submit" style="float:right;" class="btn btn-primary">Login</button>
+    <div class="col-sm-offset-4">
+      <button type="submit" class="btn btn-primary">Login</button>
     </div>
   </div>
   </form>
+</div>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-offset-4">
       <?php
         if (isset($_GET["msg"])) {
           echo $_GET["msg"];
